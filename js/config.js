@@ -1,0 +1,401 @@
+/**
+ * config.js - Static portfolio configuration
+ * Keeps the portfolio fully self-contained so it works when opened directly from disk.
+ */
+
+const config = {
+    site: {
+        title: "Developer Portfolio",
+        description: "Software Engineer · AI Engineer · Builder",
+        author: "Your Name",
+        theme: "dark",
+        year: "2026"
+    },
+    profile: {
+        name: "Your Name",
+        title: "Software Engineer · AI Engineer · Builder",
+        image: {
+            src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+            alt: "Professional portrait"
+        }
+    },
+    social: {
+        linkedin: "https://linkedin.com/in/yourprofile",
+        github: "https://github.com/yourprofile",
+        youtube: "https://youtube.com/@yourprofile",
+        instagram: ""
+    },
+    about: {
+        headline: "Building AI systems, developer tools, and thoughtful software.",
+        description: "I'm passionate about creating elegant systems that solve complex problems. My work spans distributed systems, AI/LLM orchestration, and developer experience. I enjoy writing about technical challenges and speaking at conferences.",
+        focus: [
+            "AI & LLM systems",
+            "Distributed systems",
+            "Developer tools",
+            "Product thinking",
+            "Technical writing"
+        ],
+        location: "San Francisco, CA",
+        status: "Building in public"
+    },
+    professionalCareer: [
+        {
+            id: "career-1",
+            company: "Tech Company Inc",
+            role: "Senior Software Engineer",
+            startDate: "2024",
+            endDate: "Present",
+            location: "San Francisco, CA",
+            description: "Leading architecture and infrastructure for AI-powered developer tools. Working on distributed systems, performance optimization, and engineering culture.",
+            achievements: [
+                "Architected real-time processing pipeline handling 10M+ events daily",
+                "Led team of 5 engineers through major infrastructure migration",
+                "Reduced system latency by 60% through database optimization"
+            ],
+            responsibilities: [
+                "System design and architecture",
+                "Technical mentorship",
+                "Infrastructure optimization",
+                "Team leadership"
+            ],
+            technologies: ["Go", "Kubernetes", "PostgreSQL", "AWS", "gRPC"],
+            images: [],
+            links: {
+                company: "https://example.com"
+            }
+        },
+        {
+            id: "career-2",
+            company: "Previous Company",
+            role: "Software Engineer",
+            startDate: "2021",
+            endDate: "2023",
+            location: "Remote",
+            description: "Developed core platform features and established engineering best practices. Focused on scalability and developer experience.",
+            achievements: [
+                "Built microservices architecture serving 1M+ users",
+                "Established testing and CI/CD practices",
+                "Open-sourced 3 internal tools"
+            ],
+            responsibilities: [
+                "Backend development",
+                "System design",
+                "Code review and standards"
+            ],
+            technologies: ["Python", "TypeScript", "Docker", "GraphQL"],
+            images: [],
+            links: {}
+        }
+    ],
+    engineeringExperience: [
+        {
+            id: "eng-1",
+            title: "Distributed Real-time Processing System",
+            description: "Built a high-performance event processing system handling streaming data at scale. This system became the foundation for multiple product features and processing pipelines.",
+            problem: "Needed to process and react to user events in real-time at scale without significant latency",
+            approach: "Designed event-driven architecture with distributed workers, message queue, and state management",
+            architecture: "Event sourcing → Kafka → Stream processors → State store → API",
+            impact: "Reduced event processing latency from 30s to <100ms. Enabled 5 new product features.",
+            metrics: [
+                { value: "10M+", label: "events/day" },
+                { value: "<100ms", label: "avg latency" },
+                { value: "99.99%", label: "uptime" }
+            ],
+            technologies: ["Go", "Kafka", "PostgreSQL", "Kubernetes", "gRPC"],
+            images: [],
+            links: {
+                github: "https://github.com/example"
+            }
+        },
+        {
+            id: "eng-2",
+            title: "Database Query Optimization",
+            description: "Optimized database query patterns and indexing strategy across the platform, resulting in significant performance improvements and cost reduction.",
+            problem: "Database queries were becoming a performance bottleneck as data volume grew 10x",
+            approach: "Analyzed slow query logs, designed new indexing strategy, refactored critical queries, implemented query caching",
+            impact: "Improved query performance by 60%, reduced database costs by 40%",
+            technologies: ["PostgreSQL", "Redis", "Python"],
+            images: [],
+            links: {}
+        }
+    ],
+    thoughtLeadership: [
+        {
+            id: "thought-1",
+            type: "article",
+            title: "Building Scalable Systems: Lessons from Production",
+            date: "2026-08",
+            description: "Deep dive into architectural patterns, trade-offs, and lessons learned building systems that scale to millions of requests.",
+            tags: ["architecture", "scalability", "systems-design"],
+            image: {
+                src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+                alt: "Article cover"
+            },
+            url: "https://medium.com/@yourprofile/scaling-systems"
+        },
+        {
+            id: "thought-2",
+            type: "tech-talk",
+            title: "LLMs in Production: Practical Patterns and Pitfalls",
+            date: "2026-07",
+            description: "Conference talk covering real-world patterns for deploying LLM systems, managing costs, and handling edge cases.",
+            tags: ["AI", "LLM", "production"],
+            image: {
+                src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+                alt: "Talk thumbnail"
+            },
+            url: "https://youtube.com/watch?v=example"
+        },
+        {
+            id: "thought-3",
+            type: "newsletter",
+            title: "Systems Engineering Weekly",
+            date: "ongoing",
+            description: "Weekly newsletter exploring distributed systems, architecture patterns, and engineering culture.",
+            tags: ["systems", "newsletter"],
+            image: {
+                src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+                alt: "Newsletter cover"
+            },
+            url: "https://substack.com/@yourprofile"
+        }
+    ],
+    speakingWritingCommunity: [
+        {
+            id: "speak-1",
+            type: "conference-talk",
+            title: "Scaling Kubernetes at 10M Events Per Second",
+            event: "KubeCon North America 2026",
+            date: "2026-09",
+            description: "Presentation on orchestrating high-throughput systems with Kubernetes, including lessons learned from production incidents.",
+            images: [
+                { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80", alt: "Speaking on KubeCon stage", caption: "Keynote presentation" },
+                { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80", alt: "KubeCon audience", caption: "Full auditorium" }
+            ],
+            links: {
+                slides: "https://slides.example.com/kubecon",
+                video: "https://youtube.com/watch?v=example"
+            }
+        },
+        {
+            id: "speak-2",
+            type: "workshop",
+            title: "Modern Distributed Systems Workshop",
+            event: "Local Tech Meetup",
+            date: "2026-06",
+            description: "3-hour hands-on workshop teaching core concepts of building distributed systems.",
+            images: [],
+            links: {
+                github: "https://github.com/example/workshop"
+            }
+        }
+    ],
+    aiLlmWork: [
+        {
+            id: "ai-1",
+            title: "AI Agent Orchestration Framework",
+            description: "Built a comprehensive framework for orchestrating multi-step AI agent workflows with support for RAG, function calling, and state management.",
+            problem: "Needed a scalable way to compose complex AI workflows without verbose boilerplate",
+            architecture: "Agent controller → Message queue → LLM → Tool execution → State store",
+            approach: "Designed agent protocol with clear state transitions, tool registry, and evaluation metrics",
+            models: ["GPT-4", "Claude", "Mixtral"],
+            frameworks: ["LangChain", "LlamaIndex", "CrewAI patterns"],
+            evaluation: "Automated testing of agent behavior, cost tracking, latency monitoring",
+            impact: "Reduced agent development time by 70%, enabled complex multi-step workflows",
+            technologies: ["Python", "OpenAI API", "PostgreSQL", "Redis"],
+            images: [],
+            links: { github: "https://github.com/example/agent-framework" }
+        },
+        {
+            id: "ai-2",
+            title: "Semantic Search and RAG Implementation",
+            description: "Implemented semantic search and retrieval-augmented generation system for knowledge base querying.",
+            problem: "Traditional keyword search was insufficient for finding relevant information in large knowledge bases",
+            approach: "Built embedding pipeline with vector database, implemented retrieval ranking, optimized context window usage",
+            models: ["text-embedding-3-large", "GPT-4"],
+            impact: "Achieved 85% accuracy in retrieval relevance, reduced hallucinations by 60%",
+            technologies: ["Python", "Pinecone", "OpenAI"],
+            images: [],
+            links: {}
+        },
+        {
+            id: "ai-3",
+            title: "Model Context Protocol (MCP) Server Development",
+            description: "Created MCP servers enabling LLM integration with custom tools and data sources.",
+            technologies: ["MCP", "Python", "TypeScript"],
+            images: [],
+            links: { github: "https://github.com/example/mcp-servers" }
+        }
+    ],
+    innovations: [
+        {
+            id: "innov-1",
+            title: "Developer Experience Platform",
+            description: "A suite of tools designed to improve developer productivity through AI-assisted development, intelligent code review, and automated documentation.",
+            status: "active",
+            problem: "Developers spend significant time on routine tasks that could be automated",
+            approach: "Built AI-powered CLI tools, IDE extensions, and API integrations",
+            impact: "Beta users report 30% time savings on routine tasks",
+            technologies: ["TypeScript", "Python", "OpenAI API", "Electron"],
+            images: [],
+            links: {
+                website: "https://example.com",
+                github: "https://github.com/example/devx-platform"
+            }
+        },
+        {
+            id: "innov-2",
+            title: "Infrastructure Automation Engine",
+            description: "Tool for generating optimized infrastructure as code from high-level specifications.",
+            status: "shipped",
+            technologies: ["Go", "Terraform", "YAML"],
+            images: [],
+            links: {
+                github: "https://github.com/example/infra-engine"
+            }
+        }
+    ],
+    openSource: [
+        {
+            id: "oss-1",
+            project: "Observable Stream Framework",
+            description: "Functional reactive programming library for TypeScript/JavaScript with focus on developer experience.",
+            status: "active",
+            technologies: ["TypeScript", "Functional Programming", "RxJS"],
+            images: [],
+            links: {
+                github: "https://github.com/example/observable-streams",
+                npm: "https://npmjs.com/example/observable-streams"
+            }
+        },
+        {
+            id: "oss-2",
+            project: "Database Migration Toolkit",
+            description: "Schema migration tool with support for multiple databases and zero-downtime migrations.",
+            status: "active",
+            technologies: ["Python", "PostgreSQL", "MySQL"],
+            images: [],
+            links: {
+                github: "https://github.com/example/db-migrate",
+                docs: "https://docs.example.com/db-migrate"
+            }
+        },
+        {
+            id: "oss-3",
+            project: "Config Management Library",
+            description: "Type-safe configuration management for Node.js and Python applications.",
+            status: "maintenance",
+            technologies: ["TypeScript", "Python"],
+            images: [],
+            links: {
+                github: "https://github.com/example/config-lib"
+            }
+        }
+    ],
+    personalBuilding: [
+        {
+            id: "build-1",
+            project: "AI Research Notebook",
+            description: "Personal collection of AI/ML experiments, research notes, and implementation notebooks exploring emerging techniques.",
+            status: "active",
+            technologies: ["Python", "PyTorch", "Jupyter"],
+            images: [],
+            links: {
+                github: "https://github.com/example/ai-research"
+            }
+        },
+        {
+            id: "build-2",
+            project: "Distributed Systems Playground",
+            description: "Implementing fundamental distributed systems algorithms from scratch to deeply understand core concepts.",
+            status: "building",
+            technologies: ["Rust", "Tokio"],
+            images: [],
+            links: {
+                github: "https://github.com/example/dist-systems"
+            }
+        },
+        {
+            id: "build-3",
+            project: "Hardware Tinkering",
+            description: "Exploring IoT, embedded systems, and edge computing with Raspberry Pi and Arduino.",
+            status: "experiment",
+            technologies: ["Rust", "Python", "C"],
+            images: [],
+            links: {
+                github: "https://github.com/example/hardware"
+            }
+        }
+    ],
+    footer: {
+        copyright: "© 2026 Your Name",
+        sourceUrl: "https://github.com/yourprofile/portfolio"
+    }
+};
+
+window.portfolioConfig = config;
+let configError = null;
+
+/**
+ * Load configuration
+ * @returns {Promise<Object>} The loaded configuration
+ */
+async function loadConfig() {
+    try {
+        if (!config || typeof config !== 'object') {
+            throw new Error('Portfolio configuration is missing or invalid.');
+        }
+        return config;
+    } catch (error) {
+        configError = error;
+        console.error('Failed to load portfolio config:', error);
+        throw error;
+    }
+}
+
+/**
+ * Get the loaded configuration
+ * @returns {Object|null} The configuration object or null if not loaded
+ */
+function getConfig() {
+    return config;
+}
+
+/**
+ * Get a nested value from config with fallback
+ * @param {string} path - Dot notation path (e.g., 'profile.name')
+ * @param {*} fallback - Fallback value if path not found
+ * @returns {*} The value or fallback
+ */
+function getConfigValue(path, fallback = null) {
+    if (!config) return fallback;
+
+    const keys = path.split('.');
+    let value = config;
+
+    for (const key of keys) {
+        if (value && typeof value === 'object' && key in value) {
+            value = value[key];
+        } else {
+            return fallback;
+        }
+    }
+
+    return value;
+}
+
+/**
+ * Check if config has loaded successfully
+ * @returns {boolean} True if config is loaded
+ */
+function isConfigLoaded() {
+    return config !== null;
+}
+
+/**
+ * Get configuration error if loading failed
+ * @returns {Error|null} The error or null
+ */
+function getConfigError() {
+    return configError;
+}

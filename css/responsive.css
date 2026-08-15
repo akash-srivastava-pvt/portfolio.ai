@@ -1,0 +1,596 @@
+/**
+ * responsive.css - Responsive design and media queries
+ * Handles breakpoints for mobile, tablet, and desktop
+ */
+
+/* ============================================================================
+   MOBILE FIRST (< 768px)
+   ============================================================================ */
+
+/* Default mobile layout - single column */
+
+.page {
+    grid-template-columns: 1fr;
+}
+
+.profile-sidebar {
+    max-height: none;
+    position: static;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+}
+
+.profile-name {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.profile-title {
+    font-size: var(--font-size-sm);
+}
+
+.social-links {
+    margin-bottom: var(--space-xl);
+    justify-content: center;
+}
+
+.about-section {
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.about-headline {
+    font-size: var(--font-size-base);
+}
+
+.about-description {
+    font-size: var(--font-size-sm);
+}
+
+.focus-tags {
+    justify-content: center;
+}
+
+.about-footer {
+    text-align: center;
+}
+
+.section-navigation {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    gap: var(--space-md);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-item {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-xs);
+}
+
+.theme-toggle {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.sections-container {
+    padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+.section-number {
+    display: none;
+}
+
+.section-header h2 {
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+}
+
+.subsection-title {
+    font-size: var(--font-size-lg);
+}
+
+.career-timeline::before {
+    left: 8px;
+}
+
+.career-item {
+    padding-left: var(--space-2xl);
+}
+
+.career-item::before {
+    left: 2px;
+}
+
+.engineering-item {
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.thought-item {
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.thoughts-grid {
+    grid-template-columns: 1fr;
+}
+
+.project-item {
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.project-title {
+    padding-right: var(--space-lg);
+}
+
+.status-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: var(--space-md);
+}
+
+.project-title {
+    margin-top: 0;
+}
+
+.speaking-item {
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.image-gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.gallery-item {
+    aspect-ratio: 16 / 9;
+}
+
+.gallery-image {
+    aspect-ratio: 16 / 9;
+}
+
+.metrics {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.links {
+    gap: var(--space-sm);
+}
+
+.link-button {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+}
+
+.footer {
+    padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.footer-content p {
+    font-size: var(--font-size-xs);
+}
+
+/* ============================================================================
+   TABLET LAYOUT (768px - 1023px)
+   ============================================================================ */
+
+@media (min-width: 768px) {
+    .page {
+        grid-template-columns: minmax(280px, 1fr) 1.5fr;
+    }
+    
+    .profile-sidebar {
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+        border-right: 1px solid var(--border);
+        border-bottom: none;
+        text-align: left;
+        padding: clamp(1.5rem, 3vw, 2rem);
+        padding-left: clamp(1rem, 2vw, 1.5rem);
+        padding-right: clamp(1rem, 2vw, 1.5rem);
+    }
+    
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .profile-image-wrapper {
+        justify-content: flex-start;
+    }
+    
+    .profile-name {
+        text-align: left;
+        font-size: clamp(1.5rem, 3vw, 1.875rem);
+    }
+    
+    .profile-title {
+        text-align: left;
+        font-size: var(--font-size-sm);
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+    
+    .about-section {
+        text-align: left;
+    }
+    
+    .focus-tags {
+        justify-content: flex-start;
+    }
+    
+    .about-footer {
+        text-align: left;
+        font-size: var(--font-size-xs);
+    }
+    
+    .section-navigation {
+        gap: var(--space-lg);
+        padding: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .nav-item {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-sm);
+    }
+    
+    .section-header {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+    
+    .section-number {
+        display: inline-block;
+    }
+    
+    .section-header h2 {
+        font-size: clamp(1.75rem, 4vw, 2.125rem);
+    }
+    
+    .sections-container {
+        max-width: 900px;
+        padding: clamp(2rem, 4vw, 3rem);
+    }
+    
+    .thoughts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-image {
+        aspect-ratio: 1;
+    }
+}
+
+/* ============================================================================
+   DESKTOP LAYOUT (1024px - 1199px)
+   ============================================================================ */
+
+@media (min-width: 1024px) {
+    .page {
+        grid-template-columns: minmax(300px, 340px) 1fr;
+    }
+    
+    .sidebar-width {
+        width: var(--sidebar-width);
+    }
+    
+    .profile-sidebar {
+        padding: clamp(2rem, 3vw, 2.5rem);
+        padding-left: clamp(1.5rem, 2vw, 2rem);
+        padding-right: clamp(1.5rem, 2vw, 2rem);
+    }
+    
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .profile-name {
+        font-size: clamp(1.75rem, 2vw, 2rem);
+    }
+    
+    .section-navigation {
+        padding: clamp(2rem, 5vw, 3rem);
+        gap: var(--space-xl);
+    }
+    
+    .nav-item {
+        padding: var(--space-md) var(--space-lg);
+    }
+    
+    .sections-container {
+        max-width: 1000px;
+        padding: clamp(2rem, 5vw, 4rem);
+    }
+    
+    .thoughts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    
+    .gallery-image {
+        aspect-ratio: 1;
+    }
+}
+
+/* ============================================================================
+   LARGE DESKTOP (1200px+)
+   ============================================================================ */
+
+@media (min-width: 1200px) {
+    .page {
+        grid-template-columns: minmax(320px, 340px) 1fr;
+    }
+    
+    .sections-container {
+        max-width: 1100px;
+        padding: clamp(2rem, 4vw, 5rem);
+    }
+}
+
+/* ============================================================================
+   ULTRA WIDE (1920px+)
+   ============================================================================ */
+
+@media (min-width: 1920px) {
+    .page {
+        grid-template-columns: minmax(340px, 360px) 1fr;
+    }
+    
+    .sections-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ============================================================================
+   SMALL PHONES (< 360px)
+   ============================================================================ */
+
+@media (max-width: 359px) {
+    .profile-name {
+        font-size: clamp(1.125rem, 3vw, 1.5rem);
+    }
+    
+    .profile-title {
+        font-size: var(--font-size-xs);
+    }
+    
+    .section-navigation {
+        padding: var(--space-md);
+        gap: var(--space-sm);
+    }
+    
+    .nav-item {
+        padding: var(--space-sm);
+        font-size: var(--font-size-xs);
+    }
+    
+    .nav-separator {
+        display: none;
+    }
+    
+    .nav-label {
+        display: none;
+    }
+    
+    .nav-number {
+        display: block;
+    }
+    
+    .sections-container {
+        padding: var(--space-lg);
+    }
+    
+    .link-button {
+        padding: 8px 12px;
+        font-size: var(--font-size-xs);
+    }
+    
+    .tags {
+        gap: var(--space-xs);
+    }
+    
+    .tag {
+        padding: 3px 8px;
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ============================================================================
+   LANDSCAPE ORIENTATION
+   ============================================================================ */
+
+@media (max-height: 600px) and (min-width: 768px) {
+    .profile-sidebar {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about-section {
+        display: none;
+    }
+}
+
+/* ============================================================================
+   TOUCH DEVICES
+   ============================================================================ */
+
+@media (hover: none) and (pointer: coarse) {
+    .nav-item:active {
+        background-color: var(--surface);
+        border-bottom-color: var(--accent);
+    }
+    
+    .social-link:active {
+        transform: scale(0.95);
+    }
+    
+    .link-button:active {
+        transform: scale(0.98);
+    }
+    
+    .tag:active {
+        background-color: var(--accent);
+        color: white;
+        border-color: var(--accent);
+    }
+}
+
+/* ============================================================================
+   HIGH RESOLUTION DISPLAYS
+   ============================================================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image,
+    .gallery-image {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ============================================================================
+   DARK MODE SPECIFIC
+   ============================================================================ */
+
+html[data-theme='dark'] {
+    /* Dark mode already handled via CSS variables */
+}
+
+/* ============================================================================
+   LIGHT MODE SPECIFIC
+   ============================================================================ */
+
+html[data-theme='light'] {
+    /* Light mode already handled via CSS variables */
+}
+
+/* ============================================================================
+   CONTRAST PREFERENCES
+   ============================================================================ */
+
+@media (prefers-contrast: more) {
+    :root {
+        --border: #cccccc;
+        --text-muted: #666666;
+    }
+    
+    html[data-theme='dark'] {
+        --border: #555555;
+        --text-muted: #aaaaaa;
+    }
+}
+
+@media (prefers-contrast: less) {
+    :root {
+        --border: #e8e8e8;
+        --text-muted: #aaaaaa;
+    }
+    
+    html[data-theme='dark'] {
+        --border: #3a3a3a;
+        --text-muted: #808080;
+    }
+}
+
+/* ============================================================================
+   FLEXIBLE LAYOUTS FOR CONTENT VARIATIONS
+   ============================================================================ */
+
+/* Two-column layout for larger screens with specific content */
+@media (min-width: 1024px) {
+    .engineering-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+/* Stacked layout on smaller screens */
+@media (max-width: 767px) {
+    .engineering-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================
+   PRINT LAYOUT
+   ============================================================================ */
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .profile-sidebar {
+        position: static;
+        max-height: none;
+        page-break-after: avoid;
+    }
+    
+    .section-navigation,
+    .footer {
+        display: none;
+    }
+    
+    .page {
+        grid-template-columns: 1fr;
+    }
+    
+    .sections-container {
+        padding: 0;
+    }
+    
+    .content-section {
+        page-break-inside: avoid;
+        margin-bottom: 2cm;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+    }
+}
